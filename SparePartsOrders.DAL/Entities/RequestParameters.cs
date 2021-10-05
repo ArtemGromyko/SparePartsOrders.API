@@ -1,4 +1,4 @@
-﻿namespace SparePartsOrders.API.Entities
+﻿namespace SparePartsOrders.DAL.Entities
 {
     public class RequestParameters
     {

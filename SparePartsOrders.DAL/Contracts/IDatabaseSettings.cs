@@ -1,4 +1,8 @@
-﻿namespace SparePartsOrders.API.Entities
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SparePartsOrders.DAL.Contracts
 {
     public interface IDatabaseSettings
     {

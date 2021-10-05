@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SparePartsOrders.API.Entities;
-using SparePartsOrders.API.Models;
-using SparePartsOrders.API.Services;
+using SparePartsOrders.BLL.Contracts;
+using SparePartsOrders.DAL.Entities;
+using SparePartsOrders.Models.RequestModels;
+using SparePartsOrders.Models.ResponseModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,30 +12,30 @@ namespace SparePartsOrders.API.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly OrdersService _ordersService;
+        private readonly IOrderService _orderService;
 
-        public OrdersController(OrdersService ordersService)
+        public OrdersController(IOrderService ordersService)
         {
-            _ordersService = ordersService;
+            _orderService = ordersService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Order>>> Get([FromQuery]RequestParameters parameters) =>
-            await _ordersService.GetAsync(parameters);
+        public async Task<ActionResult<List<OrderModel>>> Get([FromQuery] RequestParameters parameters) =>
+            await _orderService.GetOrderListAsync(parameters);
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<Order>> Put(string id, Order updateOrder)
+        public async Task<ActionResult<OrderModel>> Put(string id, OrderForUpdateModel updateOrder)
         {
-            var order = await _ordersService.GetAsync(id);
+            var order = await _orderService.GetOrderByIdAsync(id);
 
             if(order == null)
             {
                 return NotFound();
             }
 
-            await _ordersService.UpdateAsync(id, updateOrder);
+            var orderModel = await _orderService.UpdateOrderAsync(id, updateOrder);
 
-            return updateOrder;
+            return orderModel;
         }
     }
 }

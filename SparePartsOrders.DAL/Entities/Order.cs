@@ -2,7 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 
-namespace SparePartsOrders.API.Models
+namespace SparePartsOrders.DAL.Entities
 {
     public class Order
     {

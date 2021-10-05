@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.API", "SparePartsOrders.API\SparePartsOrders.API.csproj", "{210F0BFF-F695-47D0-8B0B-A90924123AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparePartsOrders.API", "SparePartsOrders.API\SparePartsOrders.API.csproj", "{210F0BFF-F695-47D0-8B0B-A90924123AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.DAL", "SparePartsOrders.DAL\SparePartsOrders.DAL.csproj", "{EB5FF42F-3F1D-4889-9E00-8F8EEA595286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.BLL", "SparePartsOrders.BLL\SparePartsOrders.BLL.csproj", "{54F383E7-67C3-4CBC-B1AA-BB78BE11CBD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.Models", "SparePartsOrders.Models\SparePartsOrders.Models.csproj", "{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{210F0BFF-F695-47D0-8B0B-A90924123AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210F0BFF-F695-47D0-8B0B-A90924123AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{210F0BFF-F695-47D0-8B0B-A90924123AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5FF42F-3F1D-4889-9E00-8F8EEA595286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5FF42F-3F1D-4889-9E00-8F8EEA595286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5FF42F-3F1D-4889-9E00-8F8EEA595286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5FF42F-3F1D-4889-9E00-8F8EEA595286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F383E7-67C3-4CBC-B1AA-BB78BE11CBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F383E7-67C3-4CBC-B1AA-BB78BE11CBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F383E7-67C3-4CBC-B1AA-BB78BE11CBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F383E7-67C3-4CBC-B1AA-BB78BE11CBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

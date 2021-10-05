@@ -6,13 +6,16 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using SparePartsOrders.API.Models;
+using SparePartsOrders.BLL.Contracts;
+using SparePartsOrders.DAL.Contracts;
+using SparePartsOrders.DAL.Entities;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SparePartsOrders.API.Services
+namespace SparePartsOrders.BLL.Services
 {
     public class OrdersReceiverService : BackgroundService
     {
@@ -25,7 +28,7 @@ namespace SparePartsOrders.API.Services
         {
             _sp = sp;
             var configuration = sp.GetRequiredService<IConfiguration>();
-            _factory = new ConnectionFactory() 
+            _factory = new ConnectionFactory()
             {
                 HostName = configuration["RabbitMQ:hostName"],
                 Port = int.Parse(configuration["RabbitMQ:port"])
@@ -37,7 +40,7 @@ namespace SparePartsOrders.API.Services
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            if(stoppingToken.IsCancellationRequested)
+            if (stoppingToken.IsCancellationRequested)
             {
                 _channel.Dispose();
                 _connection.Dispose();
@@ -55,12 +58,12 @@ namespace SparePartsOrders.API.Services
 
                 using (var scope = _sp.CreateScope())
                 {
-                    var ordersService = scope.ServiceProvider.GetRequiredService<OrdersService>();
+                    var ordersRepository= scope.ServiceProvider.GetRequiredService<IOrderRepository>();
                     var mapper = scope.ServiceProvider.GetRequiredService<IMapper>();
                     var configuration = scope.ServiceProvider.GetRequiredService<IConfiguration>();
 
                     var order = mapper.Map<Order>(orderDto);
-                    await ordersService.CreateAsync(order);
+                    await ordersRepository.CreateOrderAsync(order);
                 }
             };
 
