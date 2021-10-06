@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SparePartsOrders.DAL\SparePartsOrders.DAL.csproj" />
+    <ProjectReference Include="..\SparePartsOrders.DTO\SparePartsOrders.DTO.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,12 +14,6 @@
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="DroneMaintenance.DTO">
-      <HintPath>..\..\DroneMaintenance.API\DroneMaintenance.DTO\bin\Debug\netcoreapp3.1\DroneMaintenance.DTO.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

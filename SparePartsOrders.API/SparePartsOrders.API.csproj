@@ -14,11 +14,5 @@
     <ProjectReference Include="..\SparePartsOrders.BLL\SparePartsOrders.BLL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="DroneMaintenance.DTO">
-      <HintPath>..\..\DroneMaintenance.API\DroneMaintenance.DTO\bin\Debug\netcoreapp3.1\DroneMaintenance.DTO.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 
 </Project>

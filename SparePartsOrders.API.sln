@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparePartsOrders.API", "SparePartsOrders.API\SparePartsOrders.API.csproj", "{210F0BFF-F695-47D0-8B0B-A90924123AC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.DAL", "SparePartsOrders.DAL\SparePartsOrders.DAL.csproj", "{EB5FF42F-3F1D-4889-9E00-8F8EEA595286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparePartsOrders.DAL", "SparePartsOrders.DAL\SparePartsOrders.DAL.csproj", "{EB5FF42F-3F1D-4889-9E00-8F8EEA595286}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.BLL", "SparePartsOrders.BLL\SparePartsOrders.BLL.csproj", "{54F383E7-67C3-4CBC-B1AA-BB78BE11CBD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparePartsOrders.BLL", "SparePartsOrders.BLL\SparePartsOrders.BLL.csproj", "{54F383E7-67C3-4CBC-B1AA-BB78BE11CBD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.Models", "SparePartsOrders.Models\SparePartsOrders.Models.csproj", "{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparePartsOrders.Models", "SparePartsOrders.Models\SparePartsOrders.Models.csproj", "{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparePartsOrders.DTO", "SparePartsOrders.DTO\SparePartsOrders.DTO.csproj", "{913E37AC-1416-4C73-8278-2CE04C267028}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6AA4DC8-3A87-4E39-B242-07DD99CD4060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913E37AC-1416-4C73-8278-2CE04C267028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913E37AC-1416-4C73-8278-2CE04C267028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913E37AC-1416-4C73-8278-2CE04C267028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913E37AC-1416-4C73-8278-2CE04C267028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
