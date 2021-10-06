@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using DroneMaintenance.DTO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +8,7 @@ using RabbitMQ.Client.Events;
 using SparePartsOrders.BLL.Contracts;
 using SparePartsOrders.DAL.Contracts;
 using SparePartsOrders.DAL.Entities;
+using SparePartsOrders.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;
