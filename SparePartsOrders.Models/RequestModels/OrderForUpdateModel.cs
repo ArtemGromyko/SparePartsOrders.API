@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SparePartsOrders.Models.RequestModels
 {
     public class OrderForUpdateModel
     {
         public Guid RequestId { get; set; }
+        public Guid UserId { get; set; }
+        public string UserName { get; set; }
+        public string UserEmail { get; set; }
         public string SparePartName { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }

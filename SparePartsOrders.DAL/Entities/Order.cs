@@ -10,6 +10,12 @@ namespace SparePartsOrders.DAL.Entities
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         [BsonRepresentation(BsonType.String)]
+        public Guid UserId { get; set; }
+        [BsonRepresentation(BsonType.String)]
+        public string UserName { get; set; }
+        [BsonRepresentation(BsonType.String)]
+        public string UserEmail { get; set; }
+        [BsonRepresentation(BsonType.String)]
         public Guid RequestId { get; set; }
         public string SparePartName { get; set; }
         [BsonRepresentation(BsonType.Int32)]

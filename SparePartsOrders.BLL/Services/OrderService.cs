@@ -27,6 +27,13 @@ namespace SparePartsOrders.BLL.Services
 
             return _mapper.Map<List<OrderModel>>(orders);
         }
+        
+        public async Task<List<OrderModel>> GetOrdetListForUserAsync(Guid userId, RequestParameters parameters)
+        {
+            var orders = await _orderRepository.GetOrderListForUserAsync(userId, parameters);
+
+            return _mapper.Map<List<OrderModel>>(orders);
+        }
 
         public async Task<OrderModel> GetOrderByIdAsync(string id)
         {

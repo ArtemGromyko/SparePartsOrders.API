@@ -1,6 +1,7 @@
 ﻿using MongoDB.Driver;
 using SparePartsOrders.DAL.Contracts;
 using SparePartsOrders.DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -28,6 +29,22 @@ namespace SparePartsOrders.DAL.Repositories
             var orders = await _orders.FindAsync(order => order.Received.Equals(parameters.Received));
 
             return await orders.ToListAsync();
+        }
+
+        public async Task<List<Order>> GetOrderListForUserAsync(Guid userId, RequestParameters parameters)
+        {
+            if (parameters.Received == null)
+            {
+                var orders =  await _orders.FindAsync(order => order.UserId.Equals(userId.ToString()));
+
+                return await orders.ToListAsync();
+            }
+            else
+            {
+                var orders = await _orders.FindAsync(order => order.Received.Equals(parameters.Received) && order.UserId.Equals(userId.ToString()));
+
+                return await orders.ToListAsync();
+            }
         }
 
         public async Task<Order> GetOrderByIdAsync(string id)
